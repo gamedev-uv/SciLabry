@@ -173,7 +173,7 @@ Perform basic Matrix operations (Addition, Subtraction and Multiplication).
 > As we can see `.*` multiplies each corresponding element with the element from the other matrix. This is different that the normal `*` we are familiar with. 
 
 ### Assignment V
-Perform a simplication.
+Perform a simplification.
 
 ```
 --> A = -19.1952159;
