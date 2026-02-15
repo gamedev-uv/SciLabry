@@ -350,3 +350,351 @@ title('Ramp Signal');
 ```
 
 ![](.README/Experiment-II/Assignment-I/Assignment%20I%20Example%203%20Graph.jpg)
+
+### Assignment II:
+Generate an Unit Impulse Signal.
+
+`(i)`
+```
+t = [-10 : 10];
+y = [zeros(1, 10) 1 zeros(1, 10)];
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Unit Impulse');
+```
+![](.README/Experiment-II/Assignment-II/Assignment%20II%20Example%201%20Graph.jpg)
+
+`(ii)`
+```
+t = [-5 : 10];
+y = [zeros(1, 5) 1 zeros(1, 10)];
+plot(t, y, 'om');
+xlabel('Time');
+ylabel('Amplitude');
+title('Unit Impulse');
+```
+![](.README/Experiment-II/Assignment-II/Assignment%20II%20Example%202%20Graph.jpg)
+
+`(iii)`
+```
+t = [-30 : 30];
+y = [zeros(1, 30) 1 zeros(1, 30)];
+plot(t, y, '*m');
+xlabel('Time');
+ylabel('Amplitude');
+title('Unit Impulse');
+```
+![](.README/Experiment-II/Assignment-II/Assignment%20II%20Example%203%20Graph.jpg)
+
+### Assignment III:
+Generate an Unit Step Signal.
+
+`(i)`
+```
+t = [0 : 15];
+y = ones(1, length(t));
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Unit Step Signal');
+```
+![](.README/Experiment-II/Assignment-III/Assignment%20III%20Example%201%20Graph.jpg)
+
+`(ii)`
+```
+t = [0 : 20];
+y = ones(1, length(t));
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Unit Step Signal');
+```
+![](.README/Experiment-II/Assignment-III/Assignment%20III%20Example%202%20Graph.jpg)
+
+`(iii)`
+```
+t = [-15 : 15];
+y = [zeros(1, 15) ones(1, 16)];
+plot(t, y, '*r');
+xlabel('Time');
+ylabel('Amplitude');
+title('Unit Step Signal');
+```
+![](.README/Experiment-II/Assignment-III/Assignment%20III%20Example%203%20Graph.jpg)
+
+### Assignment IV:
+Generate a Random Signal.
+
+`(i)`
+```
+t = [0 : 0.07 : 10];
+y = rand(1, length(t));
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Random Signal');
+```
+![](.README/Experiment-II/Assignment-IV/Assignment%20IV%20Example%201%20Graph.jpg)
+
+`(ii)`
+```
+t = [0 : 0.98 : 15];
+y = rand(1, length(t));
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Random Signal');
+```
+![](.README/Experiment-II/Assignment-IV/Assignment%20IV%20Example%202%20Graph.jpg)
+
+`(iii)`
+```
+t = [0 : 1 : 5];
+y = rand(1, length(t));
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Random Signal');
+```
+![](.README/Experiment-II/Assignment-IV/Assignment%20IV%20Example%203%20Graph.jpg)
+
+### Assignment V:
+Generate a Sine Wave.
+
+`(i)`
+```
+t = [0 : 0.05 : 55];
+y = sin(t);
+plot(t, y, 'r');
+xlabel('Time');
+ylabel('Amplitude');
+title('Sine Wave');
+```
+![](.README/Experiment-II/Assignment-V/Assignment%20V%20Example%201%20Graph.jpg)
+
+`(ii)`
+```
+t = [1 : 0.095 : 50];
+y = sin(t);
+plot(t, y, 'm');
+xlabel('Time');
+ylabel('Amplitude');
+title('Sine Wave');
+```
+![](.README/Experiment-II/Assignment-V/Assignment%20V%20Example%202%20Graph.jpg)
+
+`(iii)`
+```
+A = 1;
+f = 0.67;
+phi = 0;
+
+t = [0 : 0.05 : 15];
+y = A .* sin(2 .* %pi .* f .* t + phi);
+
+plot(t, y, 'b');
+xlabel('Time');
+ylabel('Amplitude');
+title('Sine Wave');
+```
+![](.README/Experiment-II/Assignment-V/Assignment%20V%20Example%203%20Graph.jpg)
+
+`(iv)`
+```
+A = 1;
+f = 2.5;
+phi = 0;
+
+t = [1 : 0.01 : 5];
+y = A .* sin(2 .* %pi .* f .* t + phi);
+
+plot(t, y, 'b');
+xlabel('Time');
+ylabel('Amplitude');
+title('Sine Wave');
+```
+![](.README/Experiment-II/Assignment-V/Assignment%20V%20Example%204%20Graph.jpg)
+
+`(v)`
+```
+A = 1;
+f = 2.5;
+phi = 0;
+
+t = [1 : 0.123 : 25];
+y = A .* sin(2 .* %pi .* f .* t + phi);
+
+plot(t, y, 'b');
+xlabel('Time');
+ylabel('Amplitude');
+title('Sine Wave');
+```
+![](.README/Experiment-II/Assignment-V/Assignment%20V%20Example%205%20Graph.jpg)
+
+
+### Assignment VI:
+Generate a Cosine Wave.
+
+`(i)`
+```
+A = 1;
+phi = 0;
+
+t = [0 : 0.0758 : 10];
+y = cos(t);
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Cosine Wave');
+```
+![](.README/Experiment-II/Assignment-VI/Assignment%20VI%20Example%201%20Graph.jpg)
+
+`(ii)`
+```
+t = [1 : 0.0758 : 105];
+y = cos(t);
+plot(t, y, 'r');
+xlabel('Time');
+ylabel('Amplitude');
+title('Cosine Wave');
+```
+![](.README/Experiment-II/Assignment-VI/Assignment%20VI%20Example%202%20Graph.jpg)
+
+`(iii)`
+```
+A = 1;
+f = 2.5;
+phi = 0;
+
+t = [7 : 0.01 : 15.5];
+y = A .* cos(2 .* %pi .* f .* t + phi);
+
+plot(t, y, 'b');
+xlabel('Time');
+ylabel('Amplitude');
+title('Cosine Wave');
+```
+![](.README/Experiment-II/Assignment-VI/Assignment%20VI%20Example%203%20Graph.jpg)
+
+`(iv)`
+```
+A = 1;
+f = 2.5;
+phi = 0;
+
+t = [0 : 0.093 : 15.5];
+y = A .* cos(2 .* %pi .* f .* t + phi);
+
+plot(t, y, 'r');
+xlabel('Time');
+ylabel('Amplitude');
+title('Cosine Wave');
+```
+![](.README/Experiment-II/Assignment-VI/Assignment%20VI%20Example%204%20Graph.jpg)
+
+### Assignment VII:
+Generate an Exponential Wave.
+
+`(i)`
+```
+t = [-30 : 0.8 : 7.53];
+y = exp(t);
+
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Exponential Wave');
+```
+![](.README/Experiment-II/Assignment-VII/Assignment%20VII%20Example%201%20Graph.jpg)
+
+`(ii)`
+```
+t = [-3 : 0.09 : 7.53];
+alpha = 4;
+y = exp(-alpha .* t);
+
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Exponential Wave');
+```
+![](.README/Experiment-II/Assignment-VII/Assignment%20VII%20Example%202%20Graph.jpg)
+
+`(iii)`
+```
+t = [-3 : 0.05 : 35];
+alpha = 0.078;
+y = exp(alpha .* t);
+
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Exponential Wave');
+```
+![](.README/Experiment-II/Assignment-VII/Assignment%20VII%20Example%203%20Graph.jpg)
+
+### Assignment VIII:
+Generate a Damped Sine Wave.
+
+`(i)`
+```
+t = [0 : 0.09 : 15];
+y = exp(-t) .* sin(t);
+
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Damped Sine Wave');
+```
+![](.README/Experiment-II/Assignment-VIII/Assignment%20VIII%20Example%201%20Graph.jpg)
+
+`(ii)`
+```
+t = [1 : 0.007 : 105.3];
+y = exp(-t) .* sin(t);
+
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Damped Sine Wave');
+```
+![](.README/Experiment-II/Assignment-VIII/Assignment%20VIII%20Example%202%20Graph.jpg)
+
+`(iii)`
+```
+t = [0 : 0.05 : 10];
+A = 1;
+alpha = 2.98;
+f = 6;
+phi = 0;
+
+y = A .* exp(-alpha .* t) .* sin(2 .* %pi .* f .* t + phi);
+
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Damped Sine Wave');
+```
+![](.README/Experiment-II/Assignment-VIII/Assignment%20VIII%20Example%203%20Graph.jpg)
+
+`(iv)`
+```
+t = [0 : 0.005 : 20];
+A = 1;
+alpha = 6;
+f = 2.5;
+phi = 0;
+
+y = A .* exp(-alpha .* t) .* sin(2 .* %pi .* f .* t + phi);
+
+plot(t, y, 'r');
+xlabel('Time');
+ylabel('Amplitude');
+title('Damped Sine Wave');
+```
+![](.README/Experiment-II/Assignment-VIII/Assignment%20VIII%20Example%204%20Graph.jpg)
+
+### Conclusion
+
+This experiment demonstrates the generation and visualisation of various standard signals in Scilab, including impulse, step, random, sinusoidal, exponential and damped sinusoidal waveforms.
