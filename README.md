@@ -12,6 +12,7 @@ If you don't have scilab setup on your system you can download it from [here](ht
 | Sl No. | Experiment                                              | Assignment Count | 
 | :-:    | :-:                                                     | :-:              |
 |  1.    | [Mathematical calculations using Scilab](#experiment-i) | 6                |
+|  2.    | [Generation of Signals](#experiment-ii)                 | 8                |
 
 ## Experiment I
 Mathematical calculations using Scilab.
@@ -232,3 +233,120 @@ Perform a simplification.
 
    1335.
 ```
+
+### Conclusion
+I have gained knowledge about scilab software and did Mathematical calculations like addition, subtraction, multiplication, division and matrix operations.
+
+## Experiment II
+Generation of Signals.
+
+### Aim 
+To generate several signals using SciLab.
+
+### Theory 
+
+`(i).` Ramp Signal
+```
+r(t) = 0, t <  0
+     = t, t >= 0
+```
+![Ramp Signal](.README/Experiment-II/Theory/RampSignal.png)
+
+`(ii).` Unit Impulse
+```
+delta(n) = 1, n =  0
+	       = 0, n != 0
+```
+![Unit Impulse Signal](.README/Experiment-II/Theory/UnitImpulseSignal.png)
+
+`(iii).` Unit Step Signal
+```
+f(x) = 0, x <  0
+     = 1, x >= 0 
+```
+![Unit Step Signal](.README/Experiment-II/Theory/UnitStepSignal.png)
+
+`(iv).` Random Signal 
+The values are "randomly" generated based using a predefined formula.
+
+![Random Signal](.README/Experiment-II/Theory/RandomSignal.png)
+
+`(v).` Sine Wave
+```
+f(x) = Asin(wt + phi)
+
+w = 2PIf
+f = Frequency
+A = Amplitude
+phi = Phase diff
+```
+
+![Sine Wave](.README/Experiment-II/Theory/SineWave.png)
+
+
+`(vi).` Cosine Wave
+```
+f(x) = Acos(wt + phi)
+
+w = 2PIf
+f = Frequency
+A = Amplitude
+phi = Phase diff
+```
+![Cosine Wave](.README/Experiment-II/Theory/CosineWave.png)
+
+
+`(vii).` Exponential Wave
+```
+f(x) = exp(alpha * time)
+```
+![Positive Alpha exp fn](.README/Experiment-II/Theory/exp+vealpha.png)
+![Negative Alpha exp fn](.README/Experiment-II/Theory/exp-vealpha.png)
+
+`(viii).` Damped Sine Wave
+```
+f(x) = Ae(-alpha t) sin(wt + phi)
+
+w = 2PIf
+f = Frequency
+A = Amplitude
+phi = Phase diff
+```
+![Damped Sine Wave](.README/Experiment-II/Theory/DampedSineWave.png)
+
+### Assignment I
+Generate ramp signals.
+
+`(i)`
+```
+t = [0:20];
+y = t;
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Ramp Signal');
+```
+![](.README/Experiment-II/Assignment-I/Assignment%20I%20Example%201%20Graph.jpg)
+
+`(ii)`
+```
+t = [12 : 120];
+y = t;
+plot(t, y, "*r");
+xlabel('Time');
+ylabel('Amplitude');
+title('Ramp Signal');
+```
+![](.README/Experiment-II/Assignment-I/Assignment%20I%20Example%202%20Graph.jpg)
+
+`(iii)`
+```
+t = [16.152 : 101.115];
+y = t;
+plot(t, y, 'sc');
+xlabel('Time');
+ylabel('Amplitude');
+title('Ramp Signal');
+```
+
+![](.README/Experiment-II/Assignment-I/Assignment%20I%20Example%203%20Graph.jpg)
