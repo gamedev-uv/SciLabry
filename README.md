@@ -267,13 +267,13 @@ f(x) = 0, x <  0
 ![Unit Step Signal](.README/Experiment-II/Theory/UnitStepSignal.png)
 
 `(iv).` Random Signal 
-The values are "randomly" generated based using a predefined formula.
+The values are "randomly" generated using a predefined formula.
 
 ![Random Signal](.README/Experiment-II/Theory/RandomSignal.png)
 
 `(v).` Sine Wave
 ```
-f(x) = Asin(wt + phi)
+f(t) = Asin(wt + phi)
 
 w = 2PIf
 f = Frequency
@@ -286,7 +286,7 @@ phi = Phase diff
 
 `(vi).` Cosine Wave
 ```
-f(x) = Acos(wt + phi)
+f(t) = Acos(wt + phi)
 
 w = 2PIf
 f = Frequency
@@ -298,14 +298,14 @@ phi = Phase diff
 
 `(vii).` Exponential Wave
 ```
-f(x) = exp(alpha * time)
+f(t) = exp(alpha * t)
 ```
 ![Positive Alpha exp fn](.README/Experiment-II/Theory/exp+vealpha.png)
 ![Negative Alpha exp fn](.README/Experiment-II/Theory/exp-vealpha.png)
 
 `(viii).` Damped Sine Wave
 ```
-f(x) = Ae(-alpha t) sin(wt + phi)
+f(t) = Ae(-alpha t) sin(wt + phi)
 
 w = 2PIf
 f = Frequency
