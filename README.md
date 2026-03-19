@@ -9,11 +9,12 @@ Scilab programming assignments and lab work completed as part of my undergraduat
 If you don't have scilab setup on your system you can download it from [here](https://www.scilab.org/download).
 
 ## Experiments
-| Sl No. | Experiment                                              | Assignment Count | 
-| :-:    | :-:                                                     | :-:              |
-|  1.    | [Mathematical calculations using Scilab](#experiment-i) | 6                |
-|  2.    | [Generation of Signals](#experiment-ii)                 | 8                |
-|  3.    | [Operations of signals](#experiment-iii)                | 6                |
+| Sl No. | Experiment                                                 | Assignment Count | 
+| :-:    | :-:                                                        | :-:              |
+|  1.    | [Mathematical calculations using Scilab](#experiment-i)    | 6                |
+|  2.    | [Generation of Signals](#experiment-ii)                    | 8                |
+|  3.    | [Operations of signals](#experiment-iii)                   | 6                |
+|  4.    | [Determine odd and even part of a signal](#experiment-iv)  | 2                |
 
 ## Experiment I
 Mathematical calculations using Scilab.
@@ -1224,3 +1225,86 @@ title('Combined Signal');
 
 ### Conclusion
 From this experiment I have gained knowledge about basic operations such as addition, subtraction and many more of signals. Also came to know about wave simplifications. 
+
+## Experiment IV
+Determine odd and even part of a signal
+
+### Aim
+To determine odd and even part for a continuous-time signal and discrete-time signal in SciLab.
+
+### Theory
+An even signal remains unchanged when its time is reversed, it means that it is symmetric around the vertical axis. While an odd signal becomes negative of itself when time is reversed, it is asymmetric around the origin. 
+
+![](.README/Experiment-IV/Theory/oddEven.png)
+
+### Assignment I
+Determine odd and even part of continuous-time signal.
+
+```
+t = [-3 : 3];
+y = [13, 6, 1, 0, -2, -4, 12];
+
+subplot(3, 1, 1);
+plot(t, y, 'black');
+xlabel("Time");
+ylabel("Amplitude");
+title("Original Signal");
+
+c = 4;
+for j = 1 : length(t)
+    i = t(j);
+    ye(j) = [0.5 * (y(c + i) + y(c - i))];
+    yo(j) = [0.5 * (y(c + i) - y(c - i))];
+end
+
+subplot(3, 1, 2);
+plot(t, ye, 'r');
+xlabel("Time");
+ylabel("Amplitude");
+title("Even Signal");
+
+subplot(3, 1, 3);
+plot(t, yo, 'b');
+xlabel("Time");
+ylabel("Amplitude");
+title("Odd Signal");
+```
+
+![](.README/Experiment-IV/Assignment%20I/Assignment%20I%20Graph.jpg)
+
+### Assignment II:
+Determine odd and even part of discrete-time signal
+```
+n = [-3 : 3];
+y = [13, 6, 1, 0, -2, -4, 12];
+
+subplot(3, 1, 1);
+plot2d3(n, y);
+xlabel("Time");
+ylabel("Amplitude");
+title("Original Signal");
+
+c = 4;
+for j = 1 : length(n)
+    i = n(j);
+    ye(j) = [0.5 * (y(c + i) + y(c - i))];
+    yo(j) = [0.5 * (y(c + i) - y(c - i))];
+end
+
+subplot(3, 1, 2);
+plot2d3(n, ye);
+xlabel("Time");
+ylabel("Amplitude");
+title("Even Signal");
+
+subplot(3, 1, 3);
+plot2d3(n, yo);
+xlabel("Time");
+ylabel("Amplitude");
+title("Odd Signal");
+```
+
+![](.README/Experiment-IV/Assignment%20II/Assignment%20II%20Graph.jpg)
+
+### Conclusion:
+From this experiment I have learnt about discrete-time and continuous-time signals. And how to determine the odd and even part of a signal.
