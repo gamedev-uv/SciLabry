@@ -13,6 +13,7 @@ If you don't have scilab setup on your system you can download it from [here](ht
 | :-:    | :-:                                                     | :-:              |
 |  1.    | [Mathematical calculations using Scilab](#experiment-i) | 6                |
 |  2.    | [Generation of Signals](#experiment-ii)                 | 8                |
+|  3.    | [Operations of signals](#experiment-iii)                | 6                |
 
 ## Experiment I
 Mathematical calculations using Scilab.
@@ -698,3 +699,528 @@ title('Damped Sine Wave');
 ### Conclusion
 
 This experiment demonstrates the generation and visualisation of various standard signals in Scilab, including impulse, step, random, sinusoidal, exponential and damped sinusoidal waveforms.
+
+## Experiment III
+Operations of signals
+
+### Aim 
+To implement basic operations of signals using SciLab.
+
+### Theory 
+`(i).` Amplitude Scaling -
+The process of rescaling the amplitude of a signal is called amplitude scaling.
+As per example the amplitude of the signal is either amplified or attenuated.
+
+Example for continuous-time signal.
+`x(t)` is defined as `y(t) = A.x(t)`, where A is a constant.
+```
+if A >= 1, amplified
+   A <  1, attenuated 
+```
+
+![](.README/Experiment-III/Theory/amplitudeScaling.png)
+
+`(ii).` Time Reversal -
+The time reversal of a signal is folding of a signal about the time region `(t = 0)`. It is also known as the reflection of the signal about the time origin `t = 0`.
+For a continuous time signal `y(t) = x(-t)`.
+
+![](.README/Experiment-III/Theory/timeReversalOriginal.png)
+![](.README/Experiment-III/Theory/timeReversalReversed.png)
+
+`(iii).` Time Shifting -
+Time shifting or shifting of a signal in time refers to the signal being either delayed or advanced with respect to time.
+
+For a continuous time signal - 
+`y(t) = x(t - t_0)`
+`t_0` is a constant and refers to the amount and direction of the shift.
+
+![](.README/Experiment-III/Theory/timeShifting.png)
+> [!NOTE]
+> Here blue is the original signal `x(t)`, while red is `x(t + 13)`, and green is `x(t - 13)`.
+
+`(iv).` Time Scaling - 
+The process of multiplying a constant to the time axis of a signal is known as time scaling. It may be time compression or time expansion depending upon the value of the constant.
+For a continuous time signal `y(t) = x(alpha * time)`.
+
+### Assignment I
+Do amplitude scaling for a random signal, sine wave, unit step signal.
+
+`(i).` Random Signal
+``` 
+t = [-5 : 5];
+y = [0, 3, 6, 5, -3, 8, 9, -2, 15, -7, 5];
+
+subplot(3, 1, 1);
+plot(t, y, 'magenta');
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+A = 0.5678;
+y1 = A .* y;
+subplot(3, 1, 2);
+plot(t, y1, 'red');
+xlabel('Time');
+ylabel('Amplitude');
+title('Attenuated Signal');
+
+A = 12.13;
+y2 = A .* y;
+subplot(3, 1, 3);
+plot(t, y2, 'blue');
+xlabel('Time');
+ylabel('Amplitude');
+title('Amplified Signal');
+```
+
+![](.README/Experiment-III/Assignment%20I/Assignment%20I%20Example%20I%20Graph.jpg)
+
+`(ii).` Sine Wave
+```
+t = [0 : 0.059 : 15];
+f = 0.5;
+phi = 0;
+y = sin(2 .* %pi .* f .* t + phi); //wt + phi, w = 2PIf
+
+subplot(3, 1, 1);
+plot(t, y, 'magenta');
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+A = 0.5678;
+y1 = A .* y;
+subplot(3, 1, 2);
+plot(t, y1, 'red');
+xlabel('Time');
+ylabel('Amplitude');
+title('Attenuated Signal');
+
+A = 12.13;
+y2 = A .* y;
+subplot(3, 1, 3);
+plot(t, y2, 'blue');
+xlabel('Time');
+ylabel('Amplitude');
+title('Amplified Signal');
+```
+
+![](.README/Experiment-III/Assignment%20I/Assignment%20I%20Example%20II%20Graph.jpg)
+
+`(iii).` Unit Step Signal
+```
+t = [10 : 65];
+y = 1;
+
+subplot(3, 1, 1);
+plot(t, y, 'magenta');
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+A = 0.5678;
+y1 = A .* y;
+subplot(3, 1, 2);
+plot(t, y1, 'red');
+xlabel('Time');
+ylabel('Amplitude');
+title('Attenuated Signal');
+
+A = 12.13;
+y2 = A .* y;
+subplot(3, 1, 3);
+plot(t, y2, 'blue');
+xlabel('Time');
+ylabel('Amplitude');
+title('Amplified Signal');
+```
+
+![](.README/Experiment-III/Assignment%20I/Assignment%20I%20Example%20III%20Graph.jpg)
+
+### Assignment II:
+
+Do time reversal for a random signal, cosine wave, sine wave.
+
+`(i).` Random Signal
+
+```
+t = [-2 : 6];
+y = [1, 5, -9, 12, 6, 0, -3, 10.5, -4];
+
+subplot(2, 1, 1);
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+subplot(2, 1, 2);
+plot(-t, y, 'r');
+xlabel('Time');
+ylabel('Amplitude');
+title('Reverse Signal');
+```
+
+![](.README/Experiment-III/Assignment%20II/Assignment%20II%20Example%20I%20Graph.jpg)
+
+`(ii).` Cosine Signal
+
+```
+t = [0 : 0.08 : 15];
+A = 1;
+f = 2;
+phi = 0;
+y = A .* cos(2 .* %pi .* f .* t + phi);
+
+subplot(2, 1, 1);
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+subplot(2, 1, 2);
+plot(-t, y, 'r');
+xlabel('Time');
+ylabel('Amplitude');
+title('Reverse Signal');
+```
+
+![](.README/Experiment-III/Assignment%20II/Assignment%20II%20Example%20II%20Graph.jpg)
+
+`(iii).` Sine Signal
+
+```
+t = [0 : 0.08 : 15];
+A = 1;
+f = 2;
+phi = 0;
+y = A .* sin(2 .* %pi .* f .* t + phi);
+
+subplot(2, 1, 1);
+plot(t, y);
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+subplot(2, 1, 2);
+plot(-t, y, 'r');
+xlabel('Time');
+ylabel('Amplitude');
+title('Reverse Signal');
+```
+
+![](.README/Experiment-III/Assignment%20II/Assignment%20II%20Example%20III%20Graph.jpg)
+
+### Assignment III:
+
+Do time shifting for a random signal, unit impulse signal and damped sine wave.
+
+`(i).` Random Signal
+
+```id="x9k3lp"
+t = [-2 : 6];
+y = [1, 5, -9, 12, 6, 0, -3, 10.5, -4];
+t_0 = 5;
+
+subplot(3, 1, 1);
+plot(t, y, 'black');
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+subplot(3, 1, 2);
+plot(t + t_0, y, 'blue');
+xlabel('Time');
+ylabel('Amplitude');
+title('Advanced Signal');
+
+subplot(3, 1, 3);
+plot(t - t_0, y, 'red');
+xlabel('Time');
+ylabel('Amplitude');
+title('Delayed Signal');
+```
+
+![](.README/Experiment-III/Assignment%20III/Assignment%20III%20Example%20I%20Graph.jpg)
+
+`(ii).` Unit Impulse Signal
+
+```id="a7v2mz"
+t = [-6 : 6];
+y = [zeros(1, 6) 1 zeros(1, 6)];
+t_0 = 5;
+
+subplot(3, 1, 1);
+plot(t, y, 'black');
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+subplot(3, 1, 2);
+plot(t + t_0, y, 'blue');
+xlabel('Time');
+ylabel('Amplitude');
+title('Advanced Signal');
+
+subplot(3, 1, 3);
+plot(t - t_0, y, 'red');
+xlabel('Time');
+ylabel('Amplitude');
+title('Delayed Signal');
+```
+
+![](.README/Experiment-III/Assignment%20III/Assignment%20III%20Example%20II%20Graph.jpg)
+
+`(iii).` Damped Sine Wave
+
+```id="n4q8rs"
+A = 5;
+alpha = 1.5;
+f = 3.5;
+phi = 0;
+
+t = [0 : 0.5 : 100];
+y = A .* exp(-alpha .* t) .* sin(2 .* %pi .* f .* t + phi);
+t_0 = 5;
+
+subplot(3, 1, 1);
+plot(t, y, 'black');
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+subplot(3, 1, 2);
+plot(t + 5, y, 'blue');
+xlabel('Time');
+ylabel('Amplitude');
+title('Advanced Signal');
+
+subplot(3, 1, 3);
+plot(t - 5, y, 'red');
+xlabel('Time');
+ylabel('Amplitude');
+title('Delayed Signal');
+```
+
+![](.README/Experiment-III/Assignment%20III/Assignment%20III%20Example%20III%20Graph.jpg)
+
+### Assignment IV:
+
+Do time scaling for a random signal, ramp and unit impulse signal.
+
+`(i).` Random Signal
+
+```id="p3x7kd"
+t = [-2 : 6];
+y = [1, 5, -9, 12, 6, 0, -3, 10.5, -4];
+alpha = 5;
+
+subplot(3, 1, 1);
+plot(t, y, 'black');
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+subplot(3, 1, 2);
+plot(t .* alpha, y, 'blue');
+xlabel('Time');
+ylabel('Amplitude');
+title('Expanded Signal');
+
+subplot(3, 1, 3);
+plot(t / alpha, y, 'red');
+xlabel('Time');
+ylabel('Amplitude');
+title('Compressed Signal');
+```
+
+![](.README/Experiment-III/Assignment%20IV/Assignment%20IV%20Example%20I%20Graph.jpg)
+
+`(ii).` Ramp Signal
+
+```id="z7m1qw"
+t = [-5 : 20];
+y = (abs(t) + t) / 2;
+alpha = 5;
+
+subplot(3, 1, 1);
+plot(t, y, 'black');
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+subplot(3, 1, 2);
+plot(t .* alpha, y, 'blue');
+xlabel('Time');
+ylabel('Amplitude');
+title('Expanded Signal');
+
+subplot(3, 1, 3);
+plot(t / alpha, y, 'red');
+xlabel('Time');
+ylabel('Amplitude');
+title('Compressed Signal');
+```
+
+![](.README/Experiment-III/Assignment%20IV/Assignment%20IV%20Example%20II%20Graph.jpg)
+
+`(iii).` Unit Impulse Signal
+
+```id="q2v8nx"
+t = [-6 : 6];
+y = [zeros(1, 6) 1 zeros(1, 6)];
+alpha = 5;
+
+subplot(3, 1, 1);
+plot(t, y, 'black');
+xlabel('Time');
+ylabel('Amplitude');
+title('Original Signal');
+
+subplot(3, 1, 2);
+plot(t .* alpha, y, 'blue');
+xlabel('Time');
+ylabel('Amplitude');
+title('Expanded Signal');
+
+subplot(3, 1, 3);
+plot(t / alpha, y, 'red');
+xlabel('Time');
+ylabel('Amplitude');
+title('Compressed Signal');
+```
+
+![](.README/Experiment-III/Assignment%20IV/Assignment%20IV%20Example%20III%20Graph.jpg)
+
+
+### Assignment V:
+
+Do addition of 2 signals.
+
+`(i).` Random Signal
+
+```id="h8n4rb"
+t = [-3 : 5];
+
+y1 = [-6, 8, 0, 5, 7, -12, 1, 10.5, -8];
+subplot(3, 1, 1);
+plot(t, y1);
+xlabel('Time');
+ylabel('Amplitude');
+title('Random Signal #1');
+
+y2 = [2, 5, 9, -6, 7, -4, -2, 0, 13];
+subplot(3, 1, 2);
+plot(t, y2);
+xlabel('Time');
+ylabel('Amplitude');
+title('Random Signal #2');
+
+subplot(3, 1, 3);
+plot(t, y1 + y2, "black");
+xlabel('Time');
+ylabel('Amplitude');
+title('Combined Signal');
+```
+
+![](.README/Experiment-III/Assignment%20V/Assignment%20V%20Example%20I%20Graph.jpg)
+
+`(ii).` Sine and Cosine
+
+```id="m5k9yt"
+t = [0 : 0.005 : 5];
+A = 1;
+f = 3;
+phi = 0;
+
+y1 = A .* sin(2 .* %pi .* f .* t + phi);
+subplot(3, 1, 1);
+plot(t, y1);
+xlabel('Time');
+ylabel('Amplitude');
+title('Signal #1'); 
+
+f = 1.5;
+y2 = A .* cos(2 .* %pi .* f .* t + phi);
+subplot(3, 1, 2);
+plot(t, y2);
+xlabel('Time');
+ylabel('Amplitude');
+title('Signal #2');
+
+subplot(3, 1, 3);
+plot(t, y1 + y2, "black");
+xlabel('Time');
+ylabel('Amplitude');
+title('Combined Signal');
+```
+
+![](.README/Experiment-III/Assignment%20V/Assignment%20V%20Example%20II%20Graph.jpg)
+
+
+### Assignment VI
+
+Do subtraction of signals.
+
+`(i).` Random Signal
+
+```id="c6t2vd"
+t = [-2 : 6];
+
+y1 = [-6, 8, 0, 5, 7, -12, 1, 10.5, -8];
+subplot(3, 1, 1);
+plot(t, y1);
+xlabel('Time');
+ylabel('Amplitude');
+title('Random Signal #1');
+
+y2 = [2, 5, 9, -6, 7, -4, -2, 0, 13];
+subplot(3, 1, 2);
+plot(t, y2);
+xlabel('Time');
+ylabel('Amplitude');
+title('Random Signal #2');
+
+subplot(3, 1, 3);
+plot(t, y1 - y2, "black");
+xlabel('Time');
+ylabel('Amplitude');
+title('Combined Signal');
+```
+
+![](.README/Experiment-III/Assignment%20VI/Assignment%20VI%20Example%20I%20Graph.jpg)
+
+`(ii).` Sine and decaying cosine
+
+```id="r9w1ez"
+t = [0 : 0.005 : 5];
+A = 1;
+f = 3;
+alpha = 1.5;
+phi = 0;
+
+y1 = A .* sin(2 .* %pi .* f .* t + phi);
+subplot(3, 1, 1);
+plot(t, y1);
+xlabel('Time');
+ylabel('Amplitude');
+title('Signal #1'); 
+
+f = 1.5;
+y2 = A .* exp(-alpha .* t) .* cos(2 .* %pi .* f .* t + phi);
+subplot(3, 1, 2);
+plot(t, y2);
+xlabel('Time');
+ylabel('Amplitude');
+title('Signal #2');
+
+subplot(3, 1, 3);
+plot(t, y1 - y2, "black");
+xlabel('Time');
+ylabel('Amplitude');
+title('Combined Signal');
+```
+
+![](.README/Experiment-III/Assignment%20VI/Assignment%20VI%20Example%20II%20Graph.jpg)
+
+### Conclusion
+From this experiment I have gained knowledge about basic operations such as addition, subtraction and many more of signals. Also came to know about wave simplifications. 
