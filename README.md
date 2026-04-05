@@ -1315,10 +1315,10 @@ From this experiment I have learnt about discrete-time and continuous-time signa
 ## Experiment V
 Determine power and energy of a signal.
 
-## Aim
+### Aim
 To determine power and energy of a signal using SciLab
 
-## Theory
+### Theory
 An energy signal is a signal with finite energy. (0 < E < ∞).
 And a power signal is a signal with finite power. (0 < P < ∞).
 
@@ -1365,10 +1365,10 @@ In this experiment I have gained knowledge about energy and power of a signal. A
 ## Experiment VI:
 Convolution sum of 2 discrete sequences.
 
-## Aim:
+### Aim:
 To determine convolution sum of 2 discrete sequences.
 
-## Theory:
+### Theory:
 To determine convolution sum of the following discrete sequences using [Matrix method](https://en.wikipedia.org/wiki/Multidimensional_discrete_convolution).
 
 `x1(n) = {0, -1, -2, 3, 1};`
@@ -1448,10 +1448,10 @@ In this experiment I have gained knowledge about convolution sum. Calculated con
 ## Experiment VII
 Convolution integral of 2 continuous-time signals.
 
-## Aim
+### Aim
 To determine convolution integral of 2 continuous-time signals using SciLab.
 
-## Theory
+### Theory
 The convolution integral is a Mathematical operation used to determine the output of a linear time-invariant (LTI) system, where the input and the system's impulse response are known. 
 Let `x(t)` be the input signal and `h(t)` be the impulse signal.
 
