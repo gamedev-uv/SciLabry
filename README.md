@@ -9,12 +9,15 @@ Scilab programming assignments and lab work completed as part of my undergraduat
 If you don't have scilab setup on your system you can download it from [here](https://www.scilab.org/download).
 
 ## Experiments
-| Sl No. | Experiment                                                 | Assignment Count | 
-| :-:    | :-:                                                        | :-:              |
-|  1.    | [Mathematical calculations using Scilab](#experiment-i)    | 6                |
-|  2.    | [Generation of Signals](#experiment-ii)                    | 8                |
-|  3.    | [Operations of signals](#experiment-iii)                   | 6                |
-|  4.    | [Determine odd and even part of a signal](#experiment-iv)  | 2                |
+| Sl No. | Experiment                                                           | Assignment Count | 
+| :-:    | :-:                                                                  | :-:              |
+|  1.    | [Mathematical calculations using Scilab](#experiment-i)              | 6                |
+|  2.    | [Generation of Signals](#experiment-ii)                              | 8                |
+|  3.    | [Operations of signals](#experiment-iii)                             | 6                |
+|  4.    | [Determine odd and even part of a signal](#experiment-iv)            | 2                |
+|  5.    | [Determine power and energy of a signal](#experiment-v)              | 2                |
+|  6.    | [Convolution sum of 2 discrete sequences](#experiment-iv)            | 1                |
+|  7.    | [Convolution integral of 2 continuous-time signals](#experiment-iv)  | 1                |
 
 ## Experiment I
 Mathematical calculations using Scilab.
@@ -1308,3 +1311,194 @@ title("Odd Signal");
 
 ### Conclusion:
 From this experiment I have learnt about discrete-time and continuous-time signals. And how to determine the odd and even part of a signal.
+
+## Experiment V
+Determine power and energy of a signal.
+
+## Aim
+To determine power and energy of a signal using SciLab
+
+## Theory
+An energy signal is a signal with finite energy. (0 < E < ∞).
+And a power signal is a signal with finite power. (0 < P < ∞).
+
+For a continious signal `x(t)` we can find the energy and power of the signal as such - 
+![](.README/Experiment-V/Theory/energy-power.jpg)
+
+### Assignment I:
+Determination of energy signal
+
+```
+t = [0 : 0.001 : 15];
+y = 10 .* exp(-10 .* t);
+E = integrate('(10 .* exp(-10 .* t)) ^ 2', 't', 0, 2 .* %pi);
+disp('Energy of the signal: ', E);
+```
+
+`Output`
+```
+  "Energy of the signal: "
+
+   5.0000000
+```
+
+### Assignment II:
+Determination of power signal
+
+```
+t = [0 : 0.001 : 15];
+y = 10 .* exp(-10 .* t);
+P = integrate('(10 .* exp(-10 .* t)) ^ 2', 't', 0, 2 .* %pi) / (2 .* %pi);
+disp('Power of the signal in Watts: ', P);
+```
+
+`Output` 
+```
+  "Power of the signal in Watts: "
+
+   0.7957747
+```
+
+### Conclusion: 
+In this experiment I have gained knowledge about energy and power of a signal. And how to calculate them for a particular signal.
+
+## Experiment VI:
+Convolution sum of 2 discrete sequences.
+
+## Aim:
+To determine convolution sum of 2 discrete sequences.
+
+## Theory:
+To determine convolution sum of the following discrete sequences using [Matrix method](https://en.wikipedia.org/wiki/Multidimensional_discrete_convolution).
+
+`x1(n) = {0, -1, -2, 3, 1};`
+`x2(n) = {4, -3, 2, 0, 1};`
+
+Rewriting as table - 
+
+```
+        4    -3     2     0     1
+      ----------------------------
+ 0  |   0     0     0     0     0
+-1  |  -4     3    -2     0    -1
+-2  |  -8     6    -4     0    -2
+ 3  |  12    -9     6     0     3
+ 1  |   4    -3     2     0     1
+```
+
+Then taking the diagonal elements we get
+```
+y[0] = 0
+y[1] = 0 + (-4) = -4
+y[2] = 0 + 3 + (-8) = -5
+y[3] = 0 + (-2) + 6 + 12 = 16
+y[4] = 0 + 0 + (-4) + (-9) + 4 = -9
+y[5] = (-1) + 0 + 6 + (-3) = 2
+y[6] = (-2) + 0 + 2 = 0
+y[7] = 3 + 0 = 3
+y[8] = 1
+
+y[n] = {0, -4, -5, 16, -9, 2, 0, 3, 1}
+```
+
+### Assignment I:
+Calculate convolution sum for 2 discrete sequences by matrix method.
+
+```
+n1 = [0 : 4];
+y1 = [0, -1, -2, 3, 1];
+
+subplot(3, 1, 1);
+plot2d3(n1, y1);
+title('Signal#1');
+
+n2 = [0 : 4];
+y2 = [4, -3, 2, 0, 1];
+
+subplot(3, 1, 2);
+plot2d3(n2, y2);
+title('Signal#2');
+
+y = convol(y1, y2);
+disp('Convolution Sum: ', y);
+
+L = length(y);
+n = [0: L - 1];
+
+subplot(3, 1, 3);
+plot2d3(n, y);
+title('Final Signal');
+```
+
+`Output`
+```
+"Convolution Sum: "
+
+   6.661D-16  -4.  -5.   16.  -9.   2.   1.570D-16   3.   1.
+```
+
+![](.README/Experiment-VI/Assignment%20I/Assignment%20I%20Graph.jpg)
+
+> [!NOTE]
+> The weird values you see with `D` should be 0.
+
+### Conclusion: 
+In this experiment I have gained knowledge about convolution sum. Calculated convolution sum for 2 sequences theoretically and justified the answer by practical approach using SciLab.
+
+## Experiment VII
+Convolution integral of 2 continuous-time signals.
+
+## Aim
+To determine convolution integral of 2 continuous-time signals using SciLab.
+
+## Theory
+The convolution integral is a Mathematical operation used to determine the output of a linear time-invariant (LTI) system, where the input and the system's impulse response are known. 
+Let `x(t)` be the input signal and `h(t)` be the impulse signal.
+
+Then the convolution is given by -
+![](.README/Experiment-VII/Theory/convolutionIntegral.jpg)
+
+### Assignment I:
+Find the convolution integral of 2 continuous-time signals.
+
+```
+T = 10;
+y1 = ones(1, T);
+t1 = [0 : length(y1) - 1];
+
+subplot(3, 1, 1);
+xlabel('Time');
+ylabel('Amplitude');
+title('Signal #1');
+plot(t1, y1);
+
+y2 = ones(1, T);
+t2 = [0 : length(y2) - 1];
+subplot(3, 1, 2);
+xlabel('Time');
+ylabel('Amplitude');
+title('Signal #2');
+plot(t2, y2);
+
+y = convol(y1, y2) - 1;
+disp('Convol Integral: ', y);
+t = [0 : length(y1) + length(y2) - 2];
+
+subplot(3, 1, 3);
+xlabel('Time');
+ylabel('Amplitude');
+title('Convoluted Signal');
+plot(t, y);
+```
+
+Output
+```
+  "Convol Integral: "
+
+   2.220D-16   1.   2.   3.   4.   5.   6.   7.   8.   9.   8.   7.   6.   5.   4.   3.   2.   1.  -4.441D-16
+```
+
+### Conclusion: 
+In this experiment I have gained knowledge about Convolution integral and performed it using SciLab.
+
+![](.README/Experiment-VII/Assignment%20I/Assignment%20I%20Graph.jpg)
