@@ -16,8 +16,8 @@ If you don't have scilab setup on your system you can download it from [here](ht
 |  3.    | [Operations of signals](#experiment-iii)                             | 6                |
 |  4.    | [Determine odd and even part of a signal](#experiment-iv)            | 2                |
 |  5.    | [Determine power and energy of a signal](#experiment-v)              | 2                |
-|  6.    | [Convolution sum of 2 discrete sequences](#experiment-iv)            | 1                |
-|  7.    | [Convolution integral of 2 continuous-time signals](#experiment-iv)  | 1                |
+|  6.    | [Convolution sum of 2 discrete sequences](#experiment-vi)            | 1                |
+|  7.    | [Convolution integral of 2 continuous-time signals](#experiment-vii)  | 1                |
 
 ## Experiment I
 Mathematical calculations using Scilab.
