@@ -19,6 +19,28 @@ If you don't have scilab setup on your system you can download it from [here](ht
 |  6.    | [Convolution sum of 2 discrete sequences](#experiment-vi)            | 1                |
 |  7.    | [Convolution integral of 2 continuous-time signals](#experiment-vii)  | 1                |
 
+## Practice Problems
+
+| Sl  | Questions |
+| :-:|  :-:|
+| 1.  | [Question 1](#question-1)   |
+| 2.  | [Question 2](#question-2)   |
+| 3.  | [Question 3](#question-3)   |
+| 4.  | [Question 4](#question-4)   |
+| 5.  | [Question 5](#question-5)   |
+| 6.  | [Question 6](#question-6)   |
+| 7.  | [Question 7](#question-7)   |
+| 8.  | [Question 8](#question-8)   |
+| 9.  | [Question 9](#question-9)   |
+| 10. | [Question 10](#question-10) |
+| 11. | [Question 11](#question-11) |
+| 12. | [Question 12](#question-12) |
+| 13. | [Question 13](#question-13) |
+| 14. | [Question 14](#question-14) |
+| 15. | [Question 15](#question-15) |
+| 16. | [Question 16](#question-16) |
+| 17. | [Question 17](#question-17) |
+
 ## Experiment I
 Mathematical calculations using Scilab.
 
@@ -1502,3 +1524,125 @@ Output
 In this experiment I have gained knowledge about Convolution integral and performed it using SciLab.
 
 ![](.README/Experiment-VII/Assignment%20I/Assignment%20I%20Graph.jpg)
+
+
+## Practice Problems
+
+### Question 1
+Generate random signals at `t1 = [0 : 0.0392 : 26]`, `t2 = [1 : 1.123 : 13]` and do time shifting.
+
+`Answer` [question1.sci](Practice%20Problems%20Files\question1.sci)
+
+![](.README/Practice%20Problems/question1.png)
+
+### Question 2
+Generate two discrete time signals and add them.
+
+`Answer` [question2.sci](Practice%20Problems%20Files\question2.sci)
+
+![](.README/Practice%20Problems/question2.png)
+
+### Question 3
+Generate Unit Impulse and Unit Step signal.
+
+`Answer` [question3.sci](Practice%20Problems%20Files\question3.sci)
+
+![](.README/Practice%20Problems/question3.png)
+
+### Question 4
+Do Amplitude Scaling with unit ramp signal. Take A=10, B=0.529.
+
+`Answer` [question4.sci](Practice%20Problems%20Files\question4.sci)
+
+![](.README/Practice%20Problems/question4.png)
+
+### Question 5
+Do time scaling with damped sine wave. Take t=[0:0.114:45].
+
+`Answer` [question5.sci](Practice%20Problems%20Files\question5.sci)
+
+![](.README/Practice%20Problems/question5.png)
+
+### Question 6
+Do subtraction with one cos wave and one sine wave.
+
+`Answer` [question6.sci](Practice%20Problems%20Files\question6.sci)
+
+![](.README/Practice%20Problems/question6.png)
+
+### Question 7
+Generate ramp signal and do time shifting with ramp signal.
+
+`Answer` [question7.sci](Practice%20Problems%20Files\question7.sci)
+
+![](.README/Practice%20Problems/question7.png)
+
+### Question 8
+Do time reversal and time scaling with unit step signal.
+
+`Answer` [question8.sci](Practice%20Problems%20Files\question8.sci)
+
+![](.README/Practice%20Problems/question8.png)
+
+### Question 9
+Take two discrete time signals and do addition.
+
+`Answer` [question9.sci](Practice%20Problems%20Files\question9.sci)
+
+![](.README/Practice%20Problems/question9.png)
+
+### Question 10
+Determine odd and even part for continuous time signal.
+
+`Answer` [question10.sci](Practice%20Problems%20Files\question10.sci)
+
+![](.README/Practice%20Problems/question10.png)
+
+### Question 11
+Do amplitude scaling for two random discrete signals.
+
+`Answer` [question11.sci](Practice%20Problems%20Files\question11.sci)
+
+![](.README/Practice%20Problems/question11.png)
+
+### Question 12
+Determine convolution sum of two discrete signals.
+
+`Answer` [question12.sci](Practice%20Problems%20Files\question12.sci)
+
+![](.README/Practice%20Problems/question12.png)
+
+### Question 13
+Do convolution Integral of two continuous time signals.
+
+`Answer` [question13.sci](Practice%20Problems%20Files\question13.sci)
+
+![](.README/Practice%20Problems/question13.png)
+
+### Question 14
+Do time shifting with unit impulse signal.
+
+`Answer` [question14.sci](Practice%20Problems%20Files\question14.sci)
+
+![](.README/Practice%20Problems/question14.png)
+
+### Question 15
+Take two discrete time sequence and do subtraction.
+
+`Answer` [question15.sci](Practice%20Problems%20Files\question15.sci)
+
+![](.README/Practice%20Problems/question15.png)
+
+### Question 16
+Generate sine waves and subplot them.
+
+`Answer` [question16.sci](Practice%20Problems%20Files\question16.sci)
+
+![](.README/Practice%20Problems/question16.png)
+
+### Question 17
+Generate a sine wave and a damped sine wave and add them.
+
+`Answer` [question17.sci](Practice%20Problems%20Files\question17.sci)
+
+![](.README/Practice%20Problems/question17.png)
