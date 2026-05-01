@@ -1,7 +1,7 @@
 //Do Amplitude Scaling with unit ramp signal. Take A=10, B=0.529
 
 t = [-5 : 1 : 5];
-y = (abs(t) + t) / 2;
+y = (abs(t) + t) .* 0.5;
 A = 10;
 B = 0.529;
 
